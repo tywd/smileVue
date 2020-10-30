@@ -5,23 +5,31 @@
   "editor.tabSize": 2,
   // #每次保存的时候自动格式化 
   "editor.formatOnSave": true,
+  // 开启 vscode 文件路径导航
+  "breadcrumbs.enabled": true,
+  //  #去掉代码结尾的分号 
+  "prettier.semi": false,
+  //  #使用带引号替代双引号 
+  "prettier.singleQuote": true,
   // #每次保存的时候将代码按eslint格式进行修复
   "eslint.autoFixOnSave": true,
   // 添加 vue 支持
   "eslint.validate": [
     "javascript",
     "javascriptreact",
+    // {
+    //   "language": "html",
+    //   "autoFix": true
+    // },
     {
       "language": "vue",
       "autoFix": true
     }
   ],
+  // 显示 markdown 中英文切换时产生的特殊字符
+  "editor.renderControlCharacters": true,
   //  #让prettier使用eslint的代码格式进行校验 
   "prettier.eslintIntegration": true,
-  //  #去掉代码结尾的分号 
-  "prettier.semi": false,
-  //  #使用带引号替代双引号 
-  "prettier.singleQuote": true,
   //  #让函数(名)和后面的括号之间加个空格
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   // #这个按用户自身习惯选择 
@@ -30,8 +38,17 @@
   "vetur.format.defaultFormatter.js": "vscode-typescript",
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
-      "wrap_attributes": "force"
       // #vue组件中html代码格式化样式
+      "wrap_attributes": "force", //也可以设置为“auto”，效果会不一样
+      "wrap_line_length": 200,
+      "end_with_newline": false,
+      "semi": true,
+      "singleQuote": true
+    },
+    "prettier": {
+      "trailingCommas": "none",
+      "singleQuote": false,
+      "semi": true
     }
   },
   // 格式化stylus, 需安装Manta's Stylus Supremacy插件
