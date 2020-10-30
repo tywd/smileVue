@@ -7,7 +7,7 @@
  -->
 # smileVue
 #### 项目介绍
- vue+node制作一个全栈的移动web页面	 vue+node制作一个全栈的移动web页面
+vue+node制作一个全栈的移动web页面	 vue+node制作一个全栈的移动web页面
 
 PS: 从https://gitee.com/cjty/smileVue迁移过来
  	 
@@ -30,35 +30,26 @@ http://jspang.com/post/vue-koa.html
 <!-- 每3秒更新一次 -->
 <meta http-equiv="refresh" content="3">
 
-#### 打开mongo服务连接数据库
-1. cmd打开 进入 data（数据存放地址） 下的 db，然后执行 mongod --bind_ip <ip>
-2. cd service 执行 node index.js 进行连接数据库
-
-#### 插入数据
-> 在上面连接了数据库的基础上
-
-查看 service/index.js 里的路由
-以插入商品信息为例 ，当运行了node index.js后，
-以我的域名为例 （http://localhost:3000/goods/insertAllGoodsInfo）
-
-在浏览器输入改地址进行数据插入
-
-http://{ip}:{port}/goods/insertAllGoodsInfo
-
-> A Vue.js project
-
-## Build Setup
-
+### 前端部分运行
 ``` bash
 # install dependencies
 npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
 ```
+
+### node服务如何运行
+1. 打开mongo服务连接数据库
+ - cmd打开 进入 data（数据存放地址） 下的 db，然后执行 mongod --bind_ip <ip>
+ - cd service 执行 node index.js 进行连接数据库
+
+2. 插入数据(我自己的数据已经插入到数据库，可以跳过这步)
+ - 在上面连接了数据库的基础上
+
+> 查看 service/index.js 里的路由 以插入商品信息为例 ，当运行了node index.js后，以我的域名为例 （http://localhost:3000/goods/insertAllGoodsInfo）
+
+> 在浏览器输入该地址进行数据进行插入 http://{ip}:{port}/goods/insertAllGoodsInfo
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
